@@ -1,6 +1,8 @@
 import { Grid, TextField, Typography } from "@mui/material";
 import { Controller, useFormState } from "react-hook-form";
 import { useAppLanguage } from "../hooks";
+import { useContext } from "react";
+import { QuestionItemContext } from "../pages/question-list/items/QuestionItem";
 
 function AppTextField({
   control,
@@ -16,12 +18,15 @@ function AppTextField({
   sm,
   required,
   variant, //filled, outlined, standard
+  inputStyles,
   ...props
 }) {
   const { errors } = useFormState({ control, name });
   const { Strings } = useAppLanguage();
 
   const isError = errors[name] && errors[name].message ? true : false;
+
+  // const { inputStyles } = useContext(QuestionItemContext);
 
   return (
     <Grid sx={sx} item={item} sm={sm} xs={xs}>
@@ -36,6 +41,7 @@ function AppTextField({
         render={({ field: { value, onChange } }) => {
           return (
             <TextField
+              inputProps={{ style: { padding: "12px 20px", ...inputStyles } }}
               error={isError}
               value={value || ""}
               name={name}

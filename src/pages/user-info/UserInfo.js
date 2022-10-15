@@ -115,11 +115,8 @@ export default function SignUp() {
           alignItems: "center",
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-          <LockOutlinedIcon />
-        </Avatar>
         <Typography component="h1" variant="h5">
-          {Strings.sign_up}
+          {Strings.user_info}
         </Typography>
         <Box sx={{ mt: 3 }}>
           <Grid container spacing={2}>
@@ -138,37 +135,6 @@ export default function SignUp() {
                 required
               />
             ))}
-            {FIELD_PASSWORD.map((field) => (
-              <AppPassword
-                key={field.name}
-                item
-                xs={field.xs}
-                sm={field.sm}
-                control={control}
-                name={field.name}
-                rules={field.rules}
-                fullWidth
-                label={field.label}
-                autoFocus={field.autoFocus}
-                required
-                trigger={trigger}
-                triggerTags={field.triggerTags}
-              />
-            ))}
-            <AppSwitch
-              item
-              name="isReceiveEmail"
-              control={control}
-              label={Strings.accept_receive_email}
-            />
-            <Grid item>
-              <Grid container sx={{ alignItems: "center" }}>
-                <AppCheckbox item name="isAccept" control={control} />
-                <Link sx={{ ml: -2 }} href="#">
-                  {Strings.accept_term}
-                </Link>
-              </Grid>
-            </Grid>
 
             <AppSelect
               item
@@ -225,19 +191,8 @@ export default function SignUp() {
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
           >
-            {Strings.sign_up}
+            {Strings.update}
           </Button>
-          <Grid container justifyContent="flex-end">
-            <Grid item>
-              <Link
-                onClick={() => navigate("/")}
-                variant="body2"
-                sx={{ cursor: "pointer" }}
-              >
-                {Strings.already_have_account}
-              </Link>
-            </Grid>
-          </Grid>
         </Box>
       </Box>
       <Grid

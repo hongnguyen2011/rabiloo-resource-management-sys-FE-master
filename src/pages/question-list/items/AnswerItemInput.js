@@ -13,6 +13,7 @@ export function AnswerItemInput({ questionNumber, control }) {
       fullWidth={true}
       required
       label={"Answer Here"}
+      inputStyles={{ border: "1px solid black" }}
     />
   );
 }

@@ -53,11 +53,17 @@ const EN = {
   edit_success_common: "Edited successfully",
   deleted_success_common: "Deleted successfully",
   do_you_wanna_delete_user: "Do you want to delete user?",
-  pl_table: "Premier League Table",
+  pl_table: "Submission History",
+  user_info: "User Info",
+  update: "Update",
+  // time: "Time",
+  // date: "Date",
+  // score: "Score",
 };
 
 const VI = {
   ...EN,
+
   app_name: "Material UI Base",
   sign_in: "Đăng nhập",
   sign_in_successful: "Đăng nhập thành công",
@@ -111,7 +117,12 @@ const VI = {
   edit_success_common: "Chỉnh sửa thành công",
   deleted_success_common: "Xóa thành công",
   do_you_wanna_delete_user: "Bạn có muốn xóa người dùng không?",
-  pl_table: "Bảng xếp hạng Premier League",
+  pl_table: "Lịch sử nộp bài",
+  user_info: "Thông tin người dùng",
+  update: "Cập nhật",
+  // time: "Thời gian làm bài",
+  // date: "Nộp bài lúc",
+  // score: "Điểm số",
 };
 
 const JP = {

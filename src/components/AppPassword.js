@@ -54,6 +54,7 @@ function AppPassword({
             <FormControl sx={{ width: "100%" }} variant={variant}>
               <InputLabel>{label}</InputLabel>
               <OutlinedInput
+                inputProps={{ style: { padding: "12px 20px" } }}
                 error={isError}
                 value={value || ""}
                 name={name}
@@ -71,7 +72,8 @@ function AppPassword({
                     <IconButton
                       onClick={() => setShow((prev) => !prev)}
                       onMouseDown={handleMouseDownPassword}
-                      edge="end">
+                      edge="end"
+                    >
                       {show ? <VisibilityOff /> : <Visibility />}
                     </IconButton>
                   </InputAdornment>

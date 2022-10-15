@@ -78,13 +78,48 @@ function Question() {
         },
       ],
     },
+
+    {
+      number: "04",
+      question: "Which three ",
+      type: "checkbox",
+
+      answerList: [
+        {
+          content: "answer 1",
+          is_result: true,
+        },
+        {
+          content: "answer 2",
+          is_result: true,
+        },
+        {
+          content: "answer 3",
+          is_result: false,
+        },
+        {
+          content: "answer 4",
+          is_result: false,
+        },
+        {
+          content: "answer 5",
+          is_result: false,
+        },
+      ],
+    },
+
+    {
+      number: "05",
+      question: "true about a competitor in Oracle Sales Cloud?",
+      type: "input",
+    },
   ];
   const onSubmit = async (data) => {
     console.log(data);
   };
   return (
     <FormProvider {...value}>
-      <Container sx={{ my: 2 }} maxWidth="lg">
+      <Container classname=".container" sx={{ my: 2 }} maxWidth="lg">
         {questionList.map((question) => (
           <QuestionItem key={question.number} question={question} />
         ))}
